@@ -20,7 +20,6 @@ export default function App() {
             headerShown: false,
             tabBarActiveTintColor: "blue",
             tabBarIcon: HomeIcon,
-            tabBarLabel: "Home",
             tabBarLabelStyle: {
               color: "#000",
             },
@@ -32,7 +31,6 @@ export default function App() {
           options={{
             headerShown: false,
             tabBarIcon: HistoryIcon,
-            tabBarLabel: "History",
             tabBarLabelStyle: {
               color: "#000",
             },
@@ -44,7 +42,6 @@ export default function App() {
           options={{
             headerShown: false,
             tabBarIcon: VideoIcon,
-            tabBarLabel: "Video",
             tabBarLabelStyle: {
               color: "#000",
             },
@@ -56,7 +53,6 @@ export default function App() {
           options={{
             headerShown: false,
             tabBarIcon: VoucherIcon,
-            tabBarLabel: "Voucher",
             tabBarLabelStyle: {
               color: "#000",
             },
@@ -68,7 +64,6 @@ export default function App() {
           options={{
             headerShown: false,
             tabBarIcon: MenuIcon,
-            tabBarLabel: "Menu",
             tabBarLabelStyle: {
               color: "#000",
             },

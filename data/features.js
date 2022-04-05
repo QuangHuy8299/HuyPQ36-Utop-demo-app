@@ -1,42 +1,34 @@
 export const features = [
   {
     title: "Khuyến mãi",
-    icon: "location",
-    color: "primary",
+    icon: "heart",
   },
   {
     title: "Thức uống",
-    icon: "location",
-    color: "primary",
+    icon: "chart",
   },
   {
     title: "Nhà hàng",
-    icon: "location",
-    color: "primary",
+    icon: "camera",
   },
   {
     title: "Voucher",
-    icon: "location",
-    color: "primary",
+    icon: "bell",
   },
   {
     title: "Mua sắm",
-    icon: "location",
-    color: "primary",
+    icon: "cart",
   },
   {
     title: "Làm đẹp",
-    icon: "location",
-    color: "primary",
+    icon: "eye",
   },
   {
     title: "Giải trí",
-    icon: "location",
-    color: "primary",
+    icon: "camera",
   },
   {
     title: "UtopBACK",
-    icon: "location",
-    color: "primary",
+    icon: "pencil",
   },
 ];
