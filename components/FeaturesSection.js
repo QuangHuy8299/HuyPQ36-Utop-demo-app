@@ -1,8 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, View, FlatList } from "react-native";
 import Icon from "react-native-vector-icons/EvilIcons";
-import { features } from "../data/features";
-import { images } from "../data/sliderImg";
+import { features } from "../data/data";
+import { imagesSlider } from "../data/data";
 import SliderSection from "./SliderSection";
 
 const numColumns = Math.ceil(features.length / 2);
@@ -28,7 +28,7 @@ const FeaturesSection = () => {
         />
       </View>
       <View>
-        <SliderSection images={images} minimusWidth={20} top={0} left={10} />
+        <SliderSection images={imagesSlider} minimusWidth={20} top={0} left={10} />
       </View>
     </View>
   );
