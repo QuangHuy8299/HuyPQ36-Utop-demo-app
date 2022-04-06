@@ -12,7 +12,7 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator screenOptions={{ tabBarShowLabel: false }}>
         <Tab.Screen
           name="HomeScreenContainer"
           component={HomeScreenContainer}
@@ -20,10 +20,6 @@ export default function App() {
             headerShown: false,
             tabBarActiveTintColor: "blue",
             tabBarIcon: HomeIcon,
-            tabBarLabel: "",
-            tabBarLabelStyle: {
-              color: "#000",
-            },
           }}
         />
         <Tab.Screen
@@ -32,10 +28,6 @@ export default function App() {
           options={{
             headerShown: false,
             tabBarIcon: HistoryIcon,
-            tabBarLabel: "",
-            tabBarLabelStyle: {
-              color: "#000",
-            },
           }}
         />
         <Tab.Screen
@@ -44,10 +36,6 @@ export default function App() {
           options={{
             headerShown: false,
             tabBarIcon: VideoIcon,
-            tabBarLabel: "",
-            tabBarLabelStyle: {
-              color: "#000",
-            },
           }}
         />
         <Tab.Screen
@@ -56,10 +44,6 @@ export default function App() {
           options={{
             headerShown: false,
             tabBarIcon: VoucherIcon,
-            tabBarLabel: "",
-            tabBarLabelStyle: {
-              color: "#000",
-            },
           }}
         />
         <Tab.Screen
@@ -68,10 +52,6 @@ export default function App() {
           options={{
             headerShown: false,
             tabBarIcon: MenuIcon,
-            tabBarLabel: "",
-            tabBarLabelStyle: {
-              color: "#000",
-            },
           }}
         />
       </Tab.Navigator>

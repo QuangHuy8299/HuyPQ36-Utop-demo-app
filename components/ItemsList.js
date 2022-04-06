@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { FlatList, StyleSheet, View, ActivityIndicator } from "react-native";
-// import { data } from "../data/data";
 import CardItem from "./CardItem";
 
 const ItemsList = ({ navigation }) => {
@@ -11,24 +10,16 @@ const ItemsList = ({ navigation }) => {
   useEffect(() => {
     setIsLoading(true);
     getPosts();
-    return () => {};
   }, [pageCurrent]);
 
   const getPosts = async () => {
     fetch(
-      `https://raw.githubusercontent.com/QuangHuy8299/dbjson/master/db.json`,
-      {
-        method: "GET",
-        header: {
-          "Content-Type": "application/json",
-        },
-      }
+      `https://jsonplaceholder.typicode.com/photos?_limit=5&_page=${pageCurrent}`
     )
       .then((res) => res.json())
       .then((resJson) => {
-        // setPosts(posts.concat(resJson));
-        // setIsLoading(false);
-        console.log(resJson);
+        setPosts(posts.concat(resJson));
+        setIsLoading(false);
       })
       .catch((error) => {
         console.log(error);
@@ -37,8 +28,8 @@ const ItemsList = ({ navigation }) => {
 
   const renderFooter = () => {
     return isLoading ? (
-      <View>
-        <ActivityIndicator size="large" />
+      <View style={styles.loader}>
+        <ActivityIndicator size="small" color="#000000" />
       </View>
     ) : null;
   };
@@ -46,10 +37,8 @@ const ItemsList = ({ navigation }) => {
   const renderItem = ({ item }) => (
     <CardItem
       title={item.title}
-      logo={item.logo}
-      banner={item.banner}
-      subTitle={item.subTitle}
-      address={item.address}
+      logo={item.thumbnailUrl}
+      banner={item.url}
       navigation={navigation}
     />
   );
@@ -63,11 +52,12 @@ const ItemsList = ({ navigation }) => {
     <FlatList
       data={posts}
       renderItem={renderItem}
-      keyExtractor={(item) => item.id}
+      keyExtractor={(item, index) => index}
       style={styles.container}
       ListFooterComponent={renderFooter}
-      onEndReachedThreshold={0.25}
+      onEndReachedThreshold={0.5}
       onEndReached={handleLoadMore}
+      removeClippedSubviews={true}
     />
   );
 };
@@ -77,5 +67,9 @@ export default ItemsList;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#EFEFEF",
+  },
+  loader: {
+    marginTop: 10,
+    alignItems: "center",
   },
 });

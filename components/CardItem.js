@@ -1,7 +1,7 @@
 import React from "react";
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 
-const CardItem = ({ title, logo, banner, subTitle, address, navigation }) => {
+const CardItem = ({ title, logo, banner, navigation }) => {
   return (
     <View style={styles.containerCard}>
       <Pressable
@@ -9,7 +9,6 @@ const CardItem = ({ title, logo, banner, subTitle, address, navigation }) => {
           navigation.navigate("Detail", {
             title: title,
             banner: banner,
-            address: address,
           })
         }
       >
@@ -18,15 +17,15 @@ const CardItem = ({ title, logo, banner, subTitle, address, navigation }) => {
           <View style={styles.containerCard_headerTitle}>
             <Text style={{ fontWeight: "600" }}>{title}</Text>
             <Text style={styles.containerCard_headerTitle_text}>
-              {subTitle}
+              Ăn gì hôm nay...Chốt đơn ngay!
             </Text>
           </View>
         </View>
         <View style={styles.banner}>
-          <Image source={{ uri: banner[0] }} style={styles.banner1} />
+          <Image source={{ uri: banner }} style={styles.banner1} />
           <View style={styles.banner2}>
-            <Image style={styles.banner2_child} source={{ uri: banner[1] }} />
-            <Image style={styles.banner2_child} source={{ uri: banner[2] }} />
+            <Image style={styles.banner2_child} source={{ uri: banner }} />
+            <Image style={styles.banner2_child} source={{ uri: banner }} />
           </View>
         </View>
       </Pressable>
@@ -51,6 +50,7 @@ const styles = StyleSheet.create({
   containerCard_header: {
     flexDirection: "row",
     alignItems: "center",
+    overflow: "hidden",
   },
   tinyLogo: {
     width: 40,

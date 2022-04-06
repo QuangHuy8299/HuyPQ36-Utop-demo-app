@@ -1,12 +1,5 @@
 import React, { useCallback, useState } from "react";
-import {
-  FlatList,
-  RefreshControl,
-  ScrollView,
-  SectionList,
-  Text,
-  View,
-} from "react-native";
+import { FlatList, RefreshControl, View } from "react-native";
 import FeaturesSection from "../components/FeaturesSection";
 import Header from "../components/Header";
 import ItemsList from "../components/ItemsList";

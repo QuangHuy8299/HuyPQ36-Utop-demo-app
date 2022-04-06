@@ -3,12 +3,13 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 import SliderSection from "../components/SliderSection";
 import Icon from "react-native-vector-icons/Entypo";
 import Icon1 from "react-native-vector-icons/Ionicons";
+import { imagesSlider } from "../data/data";
 
 const DetailScreen = ({ route, navigation }) => {
-  const { title, banner, address } = route.params;
+  const { title, banner } = route.params;
   return (
     <View style={{ position: "relative" }}>
-      <SliderSection images={banner} minimusWidth={0} bottom={0} />
+      <SliderSection images={imagesSlider} minimusWidth={0} bottom={0} />
       <View
         style={{
           position: "absolute",
@@ -43,7 +44,9 @@ const DetailScreen = ({ route, navigation }) => {
         </View>
         <View style={styles.addressSection}>
           <View style={{ flex: 3 }}>
-            <Text style={styles.addressSection_text}>{address}</Text>
+            <Text style={styles.addressSection_text}>
+              Fville, Khu Công Nghệ Cao, Hòa Lạc, Thạch Thất, Hà Nội
+            </Text>
             <Text style={{ color: "#ccc" }}>(0,96km)</Text>
           </View>
           <View
