@@ -68,8 +68,8 @@ const HomeScreen = ({ navigation }) => {
   };
 
   return (
-    <View style={{ flex: 1 }}>
-      <View style={{ backgroundColor: "#fecf33" }}>
+    <View style={styles.container}>
+      <View style={styles.innerContainer}>
         <HeaderHomeScreen />
       </View>
       <FlatList
@@ -92,6 +92,12 @@ const HomeScreen = ({ navigation }) => {
 export default HomeScreen;
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  innerContainer: {
+    backgroundColor: "#fecf33",
+  },
   loader: {
     marginTop: 10,
     alignItems: "center",

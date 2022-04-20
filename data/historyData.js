@@ -89,3 +89,27 @@ export const HistoryData = [
     ],
   },
 ];
+
+export const HistorySpending = [
+  {
+    id: 1,
+    title: "Thanh toán tại quầy",
+    point: "-33",
+    date: "20/04/2022",
+    time: "11:38",
+  },
+  {
+    id: 2,
+    title: "Thanh toán tại quầy",
+    point: "-60",
+    date: "19/04/2022",
+    time: "11:38",
+  },
+  {
+    id: 3,
+    title: "Nạp Utop từ Momo",
+    point: "+200",
+    date: "18/04/2022",
+    time: "11:38",
+  },
+];

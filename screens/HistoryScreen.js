@@ -11,6 +11,7 @@ const HistoryScreen = () => {
     <View>
       <FilterHistoryDate />
       <SectionList
+        stickySectionHeadersEnabled={false}
         style={styles.container}
         sections={HistoryData}
         renderItem={({ item }) => <ItemHistory item={item} />}

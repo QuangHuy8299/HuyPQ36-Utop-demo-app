@@ -1,10 +1,22 @@
 import React from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, SectionList } from "react-native";
+import TitleHistory from "../components/History/TitleHistory";
+import MenuItem from "../components/Menu/MenuItem";
+import { MenuData } from "../data/menuData";
 
-const MenuScreen = () => {
+const MenuScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Text>MenuScreen</Text>
+      <SectionList
+        stickySectionHeadersEnabled={false}
+        sections={MenuData}
+        renderItem={({ item }) => (
+          <MenuItem item={item} navigation={navigation} />
+        )}
+        renderSectionHeader={({ section: { title } }) => (
+          <TitleHistory title={title} />
+        )}
+      />
     </View>
   );
 };
@@ -14,8 +26,7 @@ export default MenuScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: "#e5e3e3",
+    padding: 6,
   },
 });

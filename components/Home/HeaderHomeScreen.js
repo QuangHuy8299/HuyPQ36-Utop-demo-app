@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SafeAreaView, StyleSheet, View } from "react-native";
+import { Platform, SafeAreaView, StyleSheet, View } from "react-native";
 
 import UtopPoint from "./UtopPoint";
 import Funtions from "./Funtions";
@@ -15,12 +15,13 @@ const HeaderHomeScreen = () => {
 
   return (
     <SafeAreaView style={styles.header}>
-      <View>
-        <ModalLocation handleShowModal={handleShowModal} modalVisible={modalVisible}/>
-        <SearchSection handleShowModal={handleShowModal} />
-        <Funtions />
-        <UtopPoint />
-      </View>
+      <ModalLocation
+        handleShowModal={handleShowModal}
+        modalVisible={modalVisible}
+      />
+      <SearchSection handleShowModal={handleShowModal} />
+      <Funtions />
+      <UtopPoint />
     </SafeAreaView>
   );
 };
@@ -29,6 +30,6 @@ export default HeaderHomeScreen;
 
 const styles = StyleSheet.create({
   header: {
-    marginTop: 50,
+    marginTop: Platform.OS === "android" ? 50 : 0,
   },
 });

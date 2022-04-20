@@ -5,7 +5,7 @@ const UtopPoint = () => {
   return (
     <View style={styles.container}>
       <Text>Điểm Utop của bạn</Text>
-      <Text style={{ color: "red", fontWeight: "700" }}>999</Text>
+      <Text style={styles.utopText}>999</Text>
     </View>
   );
 };
@@ -23,5 +23,9 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     flexDirection: "row",
     justifyContent: "space-between",
+  },
+  utopText: {
+    color: "red",
+    fontWeight: "700",
   },
 });

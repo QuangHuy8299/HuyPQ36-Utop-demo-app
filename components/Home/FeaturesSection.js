@@ -11,7 +11,7 @@ const renderItem = ({ item }) => {
   return (
     <View style={styles.feature}>
       <Icon name={item.icon} size={40} />
-      <Text style={{ fontSize: 12 }}>{item.title}</Text>
+      <Text style={styles.title}>{item.title}</Text>
     </View>
   );
 };
@@ -56,5 +56,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginVertical: 5,
+  },
+  title: {
+    fontSize: 12,
   },
 });

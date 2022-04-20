@@ -8,17 +8,9 @@ import { imagesSlider } from "../data/data";
 const DetailScreen = ({ route, navigation }) => {
   const { title, banner } = route.params;
   return (
-    <View style={{ position: "relative" }}>
+    <View style={styles.container}>
       <SliderSection images={imagesSlider} minimusWidth={0} bottom={0} />
-      <View
-        style={{
-          position: "absolute",
-          top: 50,
-          left: 10,
-          backgroundColor: "#ccc",
-          borderRadius: 50,
-        }}
-      >
+      <View style={styles.backButton}>
         <Pressable onPress={() => navigation.goBack()}>
           <Icon1 name="arrow-back" size={20} />
         </Pressable>
@@ -33,9 +25,7 @@ const DetailScreen = ({ route, navigation }) => {
           <Icon name="star-outlined" size={12} style={styles.iconStar} />
           <Text>5.0</Text>
         </View>
-        <View
-          style={{ flexDirection: "row", marginTop: 5, alignItems: "center" }}
-        >
+        <View style={styles.statusSection}>
           <Text style={{ fontSize: 12, color: "#fba433", marginRight: 5 }}>
             Đang mở cửa
           </Text>
@@ -49,13 +39,7 @@ const DetailScreen = ({ route, navigation }) => {
             </Text>
             <Text style={{ color: "#ccc" }}>(0,96km)</Text>
           </View>
-          <View
-            style={{
-              flex: 1,
-              flexDirection: "row",
-              justifyContent: "space-around",
-            }}
-          >
+          <View style={styles.mapSection}>
             <View>
               <Icon name="address" size={20} style={styles.iconMap} />
             </View>
@@ -70,6 +54,9 @@ const DetailScreen = ({ route, navigation }) => {
 export default DetailScreen;
 
 const styles = StyleSheet.create({
+  container: {
+    position: "relative",
+  },
   iconStar: {
     color: "#fba433",
     marginRight: 4,
@@ -96,5 +83,22 @@ const styles = StyleSheet.create({
     height: 30,
     width: 30,
     textAlign: "center",
+  },
+  backButton: {
+    position: "absolute",
+    top: 50,
+    left: 10,
+    backgroundColor: "#ccc",
+    borderRadius: 50,
+  },
+  statusSection: {
+    flexDirection: "row",
+    marginTop: 5,
+    alignItems: "center",
+  },
+  mapSection: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-around",
   },
 });

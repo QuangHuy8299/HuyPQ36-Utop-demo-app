@@ -7,7 +7,7 @@ export default function SearchSection({ handleShowModal }) {
   return (
     <View style={styles.headerAbove}>
       <Pressable onPress={handleShowModal} style={styles.dropDown}>
-        <View style={{ flexDirection: "row", alignItems: "center" }}>
+        <View style={styles.innerHeader}>
           <Icon2 name="location" size={20} />
           <Text style={styles.dropDownText}>Hanoi</Text>
         </View>
@@ -30,6 +30,10 @@ export default function SearchSection({ handleShowModal }) {
 
 const styles = StyleSheet.create({
   headerAbove: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  innerHeader: {
     flexDirection: "row",
     alignItems: "center",
   },

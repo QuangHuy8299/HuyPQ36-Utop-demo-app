@@ -15,7 +15,7 @@ const CardItem = ({ title, logo, banner, navigation }) => {
         <View style={styles.containerCard_header}>
           <Image source={{ uri: logo }} style={styles.tinyLogo} />
           <View style={styles.containerCard_headerTitle}>
-            <Text style={{ fontWeight: "600" }}>{title}</Text>
+            <Text>{title}</Text>
             <Text style={styles.containerCard_headerTitle_text}>
               Ăn gì hôm nay...Chốt đơn ngay!
             </Text>
