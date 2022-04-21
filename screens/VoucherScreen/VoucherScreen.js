@@ -2,8 +2,8 @@ import React from "react";
 import { StyleSheet } from "react-native";
 
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import InvalidScreen from "./VoucherScreen/InvalidScreen";
-import ValidScreen from "./VoucherScreen/ValidScreen";
+import InvalidScreen from "./InvalidScreen";
+import ValidScreen from "./ValidScreen";
 
 const Tab = createMaterialTopTabNavigator();
 

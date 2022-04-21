@@ -1,9 +1,9 @@
 import React from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
-import SliderSection from "../components/Home/SliderSection";
+import SliderSection from "../../components/Home/SliderSection";
 import Icon from "react-native-vector-icons/Entypo";
 import Icon1 from "react-native-vector-icons/Ionicons";
-import { imagesSlider } from "../data/data";
+import { imagesSlider } from "../../data/data";
 
 const DetailScreen = ({ route, navigation }) => {
   const { title, banner } = route.params;

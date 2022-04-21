@@ -7,9 +7,9 @@ import {
   ActivityIndicator,
 } from "react-native";
 
-import CardItem from "../components/Home/CardItem";
-import HeaderHomeScreen from "../components/Home/HeaderHomeScreen";
-import FeaturesSection from "../components/Home/FeaturesSection";
+import CardItem from "../../components/Home/CardItem";
+import HeaderHomeScreen from "../../components/Home/HeaderHomeScreen";
+import FeaturesSection from "../../components/Home/FeaturesSection";
 
 const wait = (timeout) => {
   return new Promise((resolve) => setTimeout(resolve, timeout));

@@ -1,7 +1,7 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
-import TabScreenContainer from "./screens/TabScreenContainer";
-import DetailScreen from "./screens/DetailScreen";
+import TabScreenContainer from "./navigator/TabScreenContainer";
+import DetailScreen from "./screens/HomeScreen/DetailScreen";
 import ProfileScreen from "./screens/MenuScreen/ProfileScreen";
 import HistoryPoints from "./screens/MenuScreen/HistoryPoints";
 import { SafeAreaProvider } from "react-native-safe-area-context";

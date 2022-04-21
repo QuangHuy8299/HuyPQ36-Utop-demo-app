@@ -1,8 +1,8 @@
 import React from "react";
 import { Text, View, StyleSheet, SectionList } from "react-native";
-import TitleHistory from "../components/History/TitleHistory";
-import MenuItem from "../components/Menu/MenuItem";
-import { MenuData } from "../data/menuData";
+import TitleHistory from "../../components/History/TitleHistory";
+import MenuItem from "../../components/Menu/MenuItem";
+import { MenuData } from "../../data/menuData";
 
 const MenuScreen = ({ navigation }) => {
   return (

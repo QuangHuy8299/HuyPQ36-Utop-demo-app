@@ -1,10 +1,10 @@
 import React from "react";
 import { SectionList, StyleSheet, Text, View } from "react-native";
-import FilterHistoryDate from "../components/History/FilterHistoryDate";
-import FooterHistory from "../components/History/FooterHistory";
-import ItemHistory from "../components/History/ItemHistory";
-import TitleHistory from "../components/History/TitleHistory";
-import { HistoryData } from "../data/historyData";
+import FilterHistoryDate from "../../components/History/FilterHistoryDate";
+import FooterHistory from "../../components/History/FooterHistory";
+import ItemHistory from "../../components/History/ItemHistory";
+import TitleHistory from "../../components/History/TitleHistory";
+import { HistoryData } from "../../data/historyData";
 
 const HistoryScreen = () => {
   return (

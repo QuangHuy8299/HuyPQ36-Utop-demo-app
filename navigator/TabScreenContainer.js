@@ -1,10 +1,10 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Icon from "react-native-vector-icons/AntDesign";
-import VideoScreen from "./VideoScreen";
-import VoucherScreen from "./VoucherScreen";
-import MenuScreen from "./MenuScreen";
-import HistoryScreen from "./HistoryScreen";
-import HomeScreen from "./HomeScreen";
+import VideoScreen from "../screens/VideoScreen/VideoScreen";
+import VoucherScreen from "../screens/VoucherScreen/VoucherScreen";
+import MenuScreen from "../screens/MenuScreen/MenuScreen";
+import HistoryScreen from "../screens/HistoryScreen/HistoryScreen";
+import HomeScreen from "../screens/HomeScreen/HomeScreen";
 
 const BottomTab = createBottomTabNavigator();
 
