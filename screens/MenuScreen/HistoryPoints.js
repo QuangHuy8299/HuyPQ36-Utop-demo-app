@@ -1,21 +1,22 @@
-import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
+import { FlatList, StyleSheet } from "react-native";
 import React from "react";
 import { HistorySpending } from "../../data/historyData";
-import Title from "../../components/Menu/Title";
+import HistoryPoint from "../../components/Menu/HistoryPoint";
 
 export default function HistoryPoints() {
-  const renderItem = ({ item }) => (
-    <Pressable key={item.id}>
-      <Title>{item.title}</Title>
-    </Pressable>
-  );
   return (
     <FlatList
       data={HistorySpending}
-      renderItem={renderItem}
-      keyExtractor={({ item, index }) => index}
+      renderItem={({ item }) => <HistoryPoint item={item} />}
+      style={styles.container}
     />
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    padding: 10,
+    backgroundColor: "#e5e3e3",
+    marginBottom: 20,
+  },
+});
