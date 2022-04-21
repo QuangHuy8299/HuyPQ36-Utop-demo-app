@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   pressed: {
-    backgroundColor: "#f7e7b2",
+    backgroundColor: "#FFECCA",
     borderColor: "#fecf33",
   },
   text: { color: "black" },

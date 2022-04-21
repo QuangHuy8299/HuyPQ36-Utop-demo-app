@@ -2,7 +2,7 @@ export const ValidVoucher = [
   {
     id: 1,
     title: "Giảm 40% tối đa 60K cho đơn từ...",
-    expiry: "6/5/2022",
+    expiry: "06/05/2022",
     quantity: "1",
   },
 ];

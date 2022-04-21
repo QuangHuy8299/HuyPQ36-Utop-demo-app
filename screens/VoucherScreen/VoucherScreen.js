@@ -11,12 +11,17 @@ const VoucherScreen = () => {
   return (
     <Tab.Navigator
       screenOptions={{
-        tabBarLabelStyle: { textTransform: "capitalize", fontWeight: "700" },
+        tabBarLabelStyle: {
+          textTransform: "capitalize",
+          fontWeight: "700",
+          fontSize: 16,
+        },
         tabBarStyle: {
           borderRadius: 6,
-          marginHorizontal: 8,
+          marginHorizontal: 10,
+          position: "relative",
+          padding: 8,
         },
-
         tabBarIndicatorStyle: {
           backgroundColor: "#fecf33",
         },

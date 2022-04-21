@@ -1,10 +1,15 @@
-import { StyleSheet, Text, View } from "react-native";
+import { FlatList, StyleSheet, View } from "react-native";
 import React from "react";
+import VoucherItem from "../../components/Voucher/VoucherItem";
+import { ValidVoucher } from "../../data/voucherData";
 
 export default function ValidScreen() {
   return (
     <View style={styles.container}>
-      <Text></Text>
+      <FlatList
+        data={ValidVoucher}
+        renderItem={({ item }) => <VoucherItem item={item} />}
+      />
     </View>
   );
 }

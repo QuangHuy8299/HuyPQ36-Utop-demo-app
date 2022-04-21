@@ -4,12 +4,6 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import Title from "../Menu/Title";
 
 export default function VoucherItem({ item }) {
-  let year = new Date().getFullYear();
-  let month = (1 + new Date().getMonth()).toString().padStart(2, "0");
-  let day = new Date().getDate().toString().padStart(2, "0");
-
-  const date = day + "/" + month + "/" + year;
-
   return (
     <Pressable key={item.id} style={styles.container}>
       <View style={styles.iconSection}>
@@ -22,11 +16,13 @@ export default function VoucherItem({ item }) {
       <View style={styles.contentSection}>
         <Title>{item.title}</Title>
         <Text
-          style={date > item.expiry ? styles.textSuccess : styles.textError}
+          style={
+            new Date() >= item.expiry ? styles.textSuccess : styles.textError
+          }
         >
           Hết hạn: {item.expiry}
         </Text>
-        <Text>Xem</Text>
+        <Text style={styles.textOrange}>Xem</Text>
       </View>
       <View style={styles.buttonSection}></View>
     </Pressable>
@@ -41,7 +37,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginVertical: 5,
     borderRadius: 6,
-    padding: 10,
+    paddingHorizontal: 10,
+    paddingVertical: 16,
   },
   iconSection: {
     flex: 2,
@@ -62,5 +59,10 @@ const styles = StyleSheet.create({
   },
   textError: {
     color: "red",
+    marginVertical: 8,
+  },
+  textOrange: {
+    color: "orange",
+    marginBottom: 6,
   },
 });

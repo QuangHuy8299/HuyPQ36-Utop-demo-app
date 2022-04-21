@@ -30,6 +30,6 @@ export default HeaderHomeScreen;
 
 const styles = StyleSheet.create({
   header: {
-    marginTop: Platform.OS === "android" ? 50 : 0,
+    marginTop: 20,
   },
 });
