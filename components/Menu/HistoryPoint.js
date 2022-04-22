@@ -44,6 +44,7 @@ const styles = StyleSheet.create({
     marginVertical: 5,
     borderRadius: 6,
     padding: 10,
+    flex: 1,
   },
   iconSection: {
     flex: 2,

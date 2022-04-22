@@ -1,5 +1,5 @@
 import React from "react";
-import { SectionList, StyleSheet, Text, View } from "react-native";
+import { SectionList, StyleSheet, View} from "react-native";
 import FilterHistoryDate from "../../components/History/FilterHistoryDate";
 import FooterHistory from "../../components/History/FooterHistory";
 import ItemHistory from "../../components/History/ItemHistory";

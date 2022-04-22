@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Platform, SafeAreaView, StyleSheet, View } from "react-native";
-
+import { StyleSheet } from "react-native";
 import UtopPoint from "./UtopPoint";
 import Funtions from "./Funtions";
 import SearchSection from "./SearchSection";
 import ModalLocation from "./ModalLocation";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const HeaderHomeScreen = () => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -14,7 +14,7 @@ const HeaderHomeScreen = () => {
   };
 
   return (
-    <SafeAreaView style={styles.header}>
+    <SafeAreaView>
       <ModalLocation
         handleShowModal={handleShowModal}
         modalVisible={modalVisible}
@@ -28,8 +28,4 @@ const HeaderHomeScreen = () => {
 
 export default HeaderHomeScreen;
 
-const styles = StyleSheet.create({
-  header: {
-    marginTop: 20,
-  },
-});
+const styles = StyleSheet.create({});

@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, StyleSheet, SectionList } from "react-native";
+import { View, StyleSheet, SectionList } from "react-native";
 import TitleHistory from "../../components/History/TitleHistory";
 import MenuItem from "../../components/Menu/MenuItem";
 import { MenuData } from "../../data/menuData";
@@ -27,6 +27,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#e5e3e3",
-    padding: 6,
+    paddingHorizontal: 6,
   },
 });

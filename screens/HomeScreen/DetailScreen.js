@@ -8,7 +8,7 @@ import { imagesSlider } from "../../data/data";
 const DetailScreen = ({ route, navigation }) => {
   const { title, banner } = route.params;
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <SliderSection images={imagesSlider} minimusWidth={0} bottom={0} />
       <View style={styles.backButton}>
         <Pressable onPress={() => navigation.goBack()}>
@@ -47,7 +47,7 @@ const DetailScreen = ({ route, navigation }) => {
           </View>
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
